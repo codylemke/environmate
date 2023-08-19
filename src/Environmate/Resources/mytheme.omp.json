@@ -1,0 +1,202 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "version": 2,
+    "final_space": true,
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "segments": [
+                
+                {
+                    "type": "shell",
+                    "alias": "Shell",
+                    "style": "diamond",
+                    "leading_diamond": "\ue0b6",
+                    "foreground": "#000000",
+                    "background": "#cad2c5",
+                    "template": " {{ .Name }} ",
+                    "properties": {
+                        "mapped_shell_names": {
+                            "powershell": "\uebc7",
+                            "pwsh": "\uebc7",
+                            "ubuntu": "\ue73a",
+                            "cmd": "\uebc4"
+                        }
+                    }
+                },
+                {
+                    "type": "root",
+                    "alias": "Root",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0bc",
+                    "foreground": "#000000",
+                    "background": "#84a98c",
+                    "template": " \ufa64 ",
+                    "properties": {}
+                },
+                {
+                    "type": "session",
+                    "alias": "Session",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0bc",
+                    "foreground": "#ffffff",
+                    "background": "#52796f",
+                    "template": " {{ .UserName }}@{{ .HostName }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "path",
+                    "alias": "Path",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0bc",
+                    "foreground": "#ffffff",
+                    "background": "#354f52",
+                    "template": " {{ .Path }}",
+                    "properties": {
+                        "style": "agnoster_short",
+                        "max_depth": 3,
+                        "home_icon": "\uf7db ",
+                        "folder_separator_icon": " \ue0bb"
+                    }
+                },
+                {
+                    "type": "git",
+                    "alias": "Git",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0bc",
+                    "foreground": "#ffffff",
+                    "background": "#2f3e46",
+                    "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \uF692 {{ .StashCount }}{{ end }}",
+                    "properties": {
+                        "fetch_status": true,
+                        "fetch_stash_count": true,
+                        "fetch_upstream_icon": true
+                    }
+                },
+                {
+                    "type": "time",
+                    "alias": "Time",
+                    "style": "diamond",
+                    "powerline_symbol": "\ue0bc",
+                    "trailing_diamond": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#414141",
+                    "template": " \uf64f {{ .CurrentDate | date .Format }} ",
+                    "properties": {
+                        "time_format": "15:04"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "rprompt",
+            "alignment": "left",
+            "segments": [
+                {
+                    "type": "executiontime",
+                    "alias": "ExecutionTime",
+                    "style": "plain",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#8800dd",
+                    "template": " {{ .FormattedMs }} ",
+                    "properties": {
+                        "threshold": 1,
+                        "style": "austin"
+                    }
+                },
+                {
+                    "type": "python",
+                    "alias": "Python",
+                    "style": "powerline",
+                    "powerline_symbol": "\uE0B0",
+                    "foreground": "#100e23",
+                    "background": "#906cff",
+                    "template": " \uE235 {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "node",
+                    "alias": "Node",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#6CA35E",
+                    "template": " \uE718 {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "dart",
+                    "alias": "Dart",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#100e23",
+                    "background": "#06A4CE",
+                    "template": " \uE798 {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "dotnet",
+                    "alias": "Dart",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#100e23",
+                    "background": "#00ffff",
+                    "template": " \uE77F {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "java",
+                    "alias": "Java",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#4063D8",
+                    "template": " \uE738 {{ .Full }}",
+                    "properties": {}
+                },
+                {
+                    "type": "flutter",
+                    "alias": "Flutter",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#06A4CE",
+                    "template": " \ue28e {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "go",
+                    "alias": "GoLang",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#ffffff",
+                    "background": "#7FD5EA",
+                    "template": " \u202D\uFCD1 {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "rust",
+                    "alias": "Rust",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#193549",
+                    "background": "#99908a",
+                    "template": " \uE7a8 {{ .Full }} ",
+                    "properties": {}
+                },
+                {
+                    "type": "swift",
+                    "alias": "Swift",
+                    "style": "powerline",
+                    "powerline_symbol": "\ue0b0",
+                    "foreground": "#193549",
+                    "background": "#f6553c",
+                    "template": " \ue755 {{ .Full }} ",
+                    "properties": {}
+                }
+            ]
+        }
+    ]
+}

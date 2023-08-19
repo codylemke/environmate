@@ -1,0 +1,13 @@
+﻿{
+    "add": [
+        "Microsoft.VisualStudio.Workload.CoreEditor",
+        "Microsoft.VisualStudio.Workload.NativeDesktop",
+        "Microsoft.VisualStudio.Workload.ManagedDesktop",
+        "Microsoft.VisualStudio.Workload.Universal",
+        "Microsoft.VisualStudio.Workload.NativeMobile",
+        "Microsoft.VisualStudio.Workload.NetCrossPlat",
+        "Microsoft.VisualStudio.Workload.Node",
+        "Microsoft.VisualStudio.Workload.Python",
+        "Microsoft.VisualStudio.Workload.NativeGame"
+    ]
+}

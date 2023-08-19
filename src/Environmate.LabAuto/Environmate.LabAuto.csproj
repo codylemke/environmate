@@ -1,0 +1,100 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<!--General Configurations-->
+	<PropertyGroup>
+		<!--Application-->
+		<OutputType>Library</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+		<AssemblyName>Environmate.LabAuto</AssemblyName>
+		<RootNamespace>$(AssemblyName)</RootNamespace>
+		<ApplicationIcon></ApplicationIcon>
+		<ApplicationManifest></ApplicationManifest>
+		<IsPublishable>True</IsPublishable>
+		<!--Global Usings-->
+		<ImplicitUsings>disable</ImplicitUsings>
+		<!--Build-->
+		<Configurations>Debug;Release</Configurations>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Nullable>enable</Nullable>
+		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+		<AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+		<Optimize>True</Optimize>
+		<DebugType>portable</DebugType>
+		<WarningLevel>9999</WarningLevel>
+		<NoWarn>CS1591</NoWarn>
+		<TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+		<WarningsAsErrors></WarningsAsErrors>
+		<WarningsNotAsErrors></WarningsNotAsErrors>
+		<BaseOutputPath>$(BaseOutputPath)</BaseOutputPath>
+		<OutputPath>$(BaseOutputPath)$(Configuration)\$(Platform)\</OutputPath>
+		<BaseIntermediateOutputPath>$(BaseIntermediateOutputPath)</BaseIntermediateOutputPath>
+		<IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Configuration)\$(Platform)\</IntermediateOutputPath>
+		<ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+		<RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>$(AssemblyName).snk</AssemblyOriginatorKeyFile>
+		<DelaySign>False</DelaySign>
+		<CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+		<Deterministic>True</Deterministic>
+		<ErrorReport>prompt</ErrorReport>
+		<FileAlignment>512</FileAlignment>
+		<!--Package-->
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<PackageId>$(AssemblyName)</PackageId>
+		<Title>$(AssemblyName)</Title>
+		<Version>1.1.1.1</Version>
+		<Authors>Cody Lemke</Authors>
+		<Company>Cody Lemke LLC</Company>
+		<Product>$(AssemblyName)</Product>
+		<Description>Package for streamlining environment setup for laboratory automation</Description>
+		<Copyright>Copyright (c) Cody Lemke LLC 2023</Copyright>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageIcon></PackageIcon>
+		<PackageReadmeFile></PackageReadmeFile>
+		<RepositoryUrl>https://github.com/codylemke/environmate</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags></PackageTags>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<PackAsTool>False</PackAsTool>
+		<PackageOutputPath>$(OutputPath)</PackageOutputPath>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyVersion>1.1.1.1</AssemblyVersion>
+		<FileVersion>1.1.1.1</FileVersion>
+		<PackageLicenseFile></PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<IncludeSymbols>False</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<!--Analysis-->
+		<RunAnalyzersDuringBuild>True</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>True</RunAnalyzersDuringLiveAnalysis>
+		<EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+		<EnableNETAnalyzers>True</EnableNETAnalyzers>
+		<AnalysisLevel>latest-all</AnalysisLevel>
+		<!--Special-->
+		<AppendTargetFrameworkToOutputPath>False</AppendTargetFrameworkToOutputPath>
+		<AppendRuntimeIdentifierToOutputPath>True</AppendRuntimeIdentifierToOutputPath>
+		<!--Unsorted-->
+	</PropertyGroup>
+
+	<!--Debug Configurations-->
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<Optimize>False</Optimize>
+		<DebugType>portable</DebugType>
+	</PropertyGroup>
+
+	<!--Release Configurations-->
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<Optimize>True</Optimize>
+		<DebugType>none</DebugType>
+	</PropertyGroup>
+
+	<!--Dependencies-->
+
+</Project>
